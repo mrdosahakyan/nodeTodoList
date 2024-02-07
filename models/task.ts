@@ -8,7 +8,7 @@ interface ITask extends Document {
 
 const taskSchema = new Schema<ITask>(
   {
-    title: { type: String, required: true },
+    title: { type: String, required: true, unique: true },
     description: { type: String },
     deadline: { type: Date, required: true },
   },
